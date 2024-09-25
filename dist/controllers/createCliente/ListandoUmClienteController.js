@@ -13,10 +13,10 @@ exports.ListandoUmClienteController = void 0;
 const client_1 = require("../../database/client");
 const ListandoUmClienteController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { consumidor } = req.params;
+        const { id } = req.params;
         const cliente = yield client_1.prisma.cliente.findUnique({
             where: {
-                consumidor: String(consumidor)
+                id: Number(id)
             }
         });
         if (!cliente) {

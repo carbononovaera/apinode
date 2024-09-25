@@ -10,5 +10,5 @@ const router = (0, express_1.Router)();
 exports.router = router;
 router.post("/cliente", CreateClienteController_1.CreateClienteController);
 router.get("/clientes", ListandoClienteController_1.ListandoClienteController);
-router.get("/cliente/:consumidor", ListandoUmClienteController_1.ListandoUmClienteController);
+router.get("/cliente/:id", ListandoUmClienteController_1.ListandoUmClienteController);
 router.delete("/cliente", DeletandoClienteController_1.DeletarClienteController);

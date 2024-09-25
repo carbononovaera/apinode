@@ -13,7 +13,7 @@ exports.ListandoClienteController = void 0;
 const client_1 = require("../../database/client");
 const ListandoClienteController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const cliente = yield client_1.prisma.cliente.findFirst({ orderBy: { consumidor: "desc" } });
+        const cliente = yield client_1.prisma.cliente.findMany({ orderBy: { id: "asc" } });
         return res.status(200).json({ message: "Todos Cliente Cadastrado", cliente });
     }
     catch (error) {
